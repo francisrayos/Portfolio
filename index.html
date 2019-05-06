@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet" type="text/css">
+
+	<title>About Francis</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="scripts/paper-full.js"></script>
+    <script type="text/paperscript" src="scripts/canvas-index.js" canvas="canvas"></script>
+    
+</head>
+
+<style>
+	
+	h1 { 
+		font-family: 'Quicksand', sans-serif; 
+		font-size: 30pt; 
+		color: white;
+		cursor: url('../design/ronald.png'), auto;	
+	}
+	body {
+		background-color: white;
+		text-align: center;
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+
+    html, body {
+        width:  100%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+    }  
+
+    /* Scale canvas with resize attribute to full size */
+    canvas[resize] {
+        width: 100%;
+        height: 100%;
+    }
+	
+    /* #circle {
+        position: fixed; 
+        left: 300px;
+        top: 200px;
+        width: 120px;
+        height: 120px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+        border-radius: 60px;
+        background: #97e6ed;
+    } */
+
+</style>
+
+<body>
+    <!-- <div id="circle"></div> -->
+    
+    <canvas id="canvas" resize="true"></canvas>
+
+    <script src="scripts/portfolio.js"></script>
+</body>
+
+</html>
