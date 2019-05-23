@@ -2,7 +2,7 @@
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
 
     project.currentStyle = {
-        fillColor: '#97e6ed',
+        fillColor: '#B3EDF2',
         /* strokeColor: '#7cc8df',
         strokeWidth: 8 */
     } ;
@@ -51,6 +51,7 @@
  
     generateConnections(circlePaths);
  
+    // Imported from Paper.js Metaball
     // ---------------------------------------------
     function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
         var center1 = ball1.position;

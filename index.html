@@ -37,26 +37,63 @@
     canvas[resize] {
         width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        /* z-index: 100; */
+        /* display: none; */
     }
-	
-    /* #circle {
-        position: fixed; 
-        left: 300px;
-        top: 200px;
-        width: 120px;
-        height: 120px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-        border-radius: 60px;
-        background: #97e6ed;
-    } */
+
+    #intro {
+	    background-image: url("pictures/polaroid.jpg");  
+        width:100%;
+        height: 112vh;
+        background-repeat: no-repeat;
+        background-size: 300px 346px;
+        background-position: 75% 25%;
+        font-family: 'Avenir-Medium';
+        src: url(fonts/Avenir-Medium.otf);
+        position: relative;
+        color: #545454;
+        font-size: 150%; 
+        /* z-index: 0; */
+    }
+
+    .introText {
+        /* z-index: 0; */
+        width: 30%;
+        /* height: 100%; */
+        padding-top: 10%;
+        padding-left: 15%;
+        display: block;
+        position: absolute;
+
+    } 
+
+    .introText a {
+        text-decoration: none;
+        color: #65CAE2;
+    }
+
+    .introText a:hover {
+        background-color: yellow;
+    }
+
+    .introText p {
+        position: relative;
+    }
 
 </style>
 
 <body>
-    <!-- <div id="circle"></div> -->
-    
-    <canvas id="canvas" resize="true"></canvas>
+
+    <div id="intro">
+        <canvas id="canvas" resize></canvas>
+            <div class="introText">
+                <p> Hey there! I'm Francis. </p>
+                
+            </div> <!--introText-->
+    </div> <!--intro-->
 
     <script src="scripts/portfolio.js"></script>
 </body>
