@@ -16,16 +16,14 @@
 	
 	h1 { 
 		font-family: 'Quicksand', sans-serif; 
-		font-size: 20pt; 
-        font-weight: 900;
-        letter-spacing: 2px;
-        color: #545454;
-        width: 50%;
+		font-size: 30pt; 
+		color: white;
 	}
 	body {
 		background-color: white;
 		/* text-align: center; */
 		font-family: 'Quicksand', sans-serif;
+		color: white;
 	}
 
     html, body {
@@ -119,11 +117,12 @@
     }
 
     .introText {
-        width: 33%;
+        width: 30%;
         padding-top: 12%;
         padding-left: 17%;
         display: block;
         position: absolute;
+
     } 
 
     .introText a {
@@ -140,7 +139,7 @@
 
     .nav1 {
         list-style: none;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 22px;
         font-weight: bolder;
         color: #ff8b94;
@@ -150,61 +149,14 @@
         text-align: left;
         /* margin-left: 5%; */
     }
-
-
-    .featuredText {
-        position: relative;
-        color: #545454;
-        font-size: 150%; 
-    }
-
     .introText p {
         position: relative;
     }
-
-    .container {
-        margin-left: 17%;
-	    margin-right: 5%;
-	    margin-bottom: 5%;
-    }
-
-    .container a {
-        text-decoration: none;
-    }
-
-    .container a p {
-        font-family: 'Montserrat', sans-serif;
-        color: #95989A;
-        padding-bottom: 30px;
-        line-height: 25px; 
-        margin-top: 5px;
-        font-size: 20px;
-    }
-
-    .bloomberg {
-        display: block;
-        position: relative;
-        width: 100%;
-        padding-bottom: 40%;
-        height: 0;	
-        background-color: #badce6;
-        background-image: url("pictures/bloomberg.gif"); 
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        margin-bottom: 20px;	
-        transition: background-image 0.5s;
-        box-shadow: 2px 2px 10px #ededed;
-        opacity: 0.9;
-    }    
-    
-
 
 </style>
 
 <body>
     
-
     <ul class="nav1"> 
         <img src="pictures/logo.png" id="logo"><br><br>
         <li id="home">  <a href="index.html"> HOME</a></li>
@@ -212,29 +164,6 @@
         <li id="projects">  <a href="projects.html"> PROJECTS</a></li>
         <li id="contact">  <a href="contact.html"> CONTACT</a></li>
     </ul>
-    
-    <div id="intro">
-        <canvas id="canvas" resize></canvas>
-            <div class="introText">
-                <p> Hey there! I'm <span id="name">Francis</span>. </p>
-                <p> I'm a senior at <a href="https://www.cornell.edu/">Cornell University</a> majoring in Electrical and Computer Engineering and minoring in Business. </p>
-                <p> I combine my passion for design, engineering, and business to create products for anyone and everyone. </p>
-                <p> If you don't see me at in Olin Library or Duffield for more than 24 hours, call the police. </p>
-            </div> <!--introText-->
-    </div> <!--intro-->
-
-    <div class="container">
-        <a href="projects.html">
-            <div class="bloomberg"> 
-            </div> <!--featured-->
-            <h1> BLOOMBERG </h1>
-            <p> See how I spent my summer as a Global Data Summer Analyst in 2019!</p>
-        </a>
-    </div>
-    
-    
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <script src="scripts/portfolio.js"></script>
 </body>
