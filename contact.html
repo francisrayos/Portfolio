@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
 	<title>About Francis</title>
@@ -16,14 +16,17 @@
 	
 	h1 { 
 		font-family: 'Quicksand', sans-serif; 
-		font-size: 30pt; 
-		color: white;
+		font-size: 20pt; 
+        font-weight: normal;
+		color: #385170;
+        letter-spacing: 1.5px;
+        margin-top: 20%;
+        margin-left: 10%;
 	}
 	body {
 		background-color: white;
 		/* text-align: center; */
 		font-family: 'Quicksand', sans-serif;
-		color: white;
 	}
 
     html, body {
@@ -54,7 +57,7 @@
 
     #home a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #home a:hover {
@@ -66,7 +69,7 @@
 
     #about a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #about a:hover {
@@ -78,7 +81,7 @@
 
     #projects a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #projects a:hover {
@@ -90,7 +93,7 @@
 
     #contact a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #contact a:hover {
@@ -142,7 +145,7 @@
         font-family: 'Quicksand', sans-serif;
         font-size: 22px;
         font-weight: bolder;
-        color: #ff8b94;
+        color: #385170;
         position: fixed;
         z-index:9999;
         width: 50%;
@@ -153,17 +156,106 @@
         position: relative;
     }
 
+    /* ----------- Work Posts Design ----------- */
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    #fade p, h1, #me {
+        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+        -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+    }
+
+    .container {
+        margin-left: 17%;
+	    margin-right: 5%;
+	    margin-bottom: 5%;
+    }
+    
+    .container p {
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        color: #95989A;
+        font-size: 100%; 
+        margin-left: 10%;
+    }
+
+    /* ----------- Image Design ----------- */
+    #me {
+        margin-top: 10%;
+        width: 349px;
+        height: 426px;
+        /* box-shadow: 2px 2px 10px #ededed; */
+	    float: right;
+	    margin-right: 150px;
+    }
+
+    #linkedin  {
+        width: 80px;
+        height: 80px;
+        margin-left: 10%;
+    }
+
+    #gmail  {
+        width: 80px;
+        height: 80px;
+        margin-left: 1%;
+    }
+
+    #linkedin {
+        transition: filter .2s ease-in-out;
+        -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(100%); /* FF 35+ */
+    }
+
+    #linkedin:hover{
+        -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(0%); /* FF 35+ */
+    }
+
+    #gmail {
+        transition: filter .2s ease-in-out;
+        -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(100%); /* FF 35+ */
+    }
+
+    #gmail:hover{
+        -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(0%); /* FF 35+ */
+    }
+
 </style>
 
 <body>
     
     <ul class="nav1"> 
-        <img src="pictures/logo.png" id="logo"><br><br>
+        <img src="pictures/frds.png" id="logo"><br><br>
         <li id="home">  <a href="index.html"> HOME</a></li>
         <li id="about"> <a href="about.html"> ABOUT</a></li>
         <li id="projects">  <a href="projects.html"> PROJECTS</a></li>
         <li id="contact">  <a href="contact.html"> CONTACT</a></li>
     </ul>
+
+    <div id="fade">
+        <div class="container">
+            <img src="pictures/humaaanFrancisSitting.png" id="me"><br><br>
+            <h1> Say Hey! </h1>
+            <p> I promise I don't bite. </p>
+            <a href="https://www.linkedin.com/in/francis-rayos-del-sol/"><img src="pictures/linkedin.png" id="linkedin"></a>
+            <a href="mailto:fmr32@cornell.edu"><img src="pictures/gmail.png" id="gmail"></a>
+        </div>
+    </div>
 
     <script src="scripts/portfolio.js"></script>
 </body>

@@ -61,9 +61,10 @@
         height: 100px;
     }
 
+
     #home a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #home a:hover {
@@ -75,7 +76,7 @@
 
     #about a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #about a:hover {
@@ -87,7 +88,7 @@
 
     #projects a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #projects a:hover {
@@ -99,7 +100,7 @@
 
     #contact a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
     }
 
     #contact a:hover {
@@ -120,9 +121,18 @@
         /* font-family: 'Avenir'; */
         src: url(fonts/Avenir-Medium.otf);
         position: relative;
-        color: #545454;
+        color: #95989A;
         font-size: 150%; 
         /* z-index: 0; */
+    }
+
+    #introHumaaan {
+        background-image: url("pictures/humaaanFrancis.png");  
+        width:100%;
+        height: 112vh;
+        background-repeat: no-repeat;
+        background-size: 200px 302px;
+        background-position: 87% 67%;
     }
 
     .introText {
@@ -135,7 +145,7 @@
 
     .introText a {
         text-decoration: none;
-        color: #ff8b94;
+        color: #385170;
         /* cursor: pointer; */
     }
 
@@ -151,7 +161,7 @@
         font-family: 'Quicksand', sans-serif;
         font-size: 22px;
         font-weight: bolder;
-        color: #ff8b94;
+        color: #385170;
         position: fixed;
         z-index:9999;
         width: 50%;
@@ -172,6 +182,25 @@
     }
 
     /* ----------- Container Design ----------- */
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    #fade p, h1 {
+        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+        -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+    }
+
     .container {
         margin-left: 17%;
 	    margin-right: 5%;
@@ -264,34 +293,37 @@
     
 
     <ul class="nav1"> 
-        <img src="pictures/logo.png" id="logo"><br><br>
+        <img src="pictures/frds.png" id="logo"><br><br>
         <li id="home">  <a href="index.html"> HOME</a></li>
         <li id="about"> <a href="about.html"> ABOUT</a></li>
         <li id="projects">  <a href="projects.html"> PROJECTS</a></li>
         <li id="contact">  <a href="contact.html"> CONTACT</a></li>
     </ul>
     
-    <div id="intro">
-        <canvas id="canvas" resize></canvas>
-            <div class="introText">
-                <p> Hey there! I'm <span id="name">Francis</span>. </p>
-                <p> I'm a senior at <a href="https://www.cornell.edu/">Cornell University</a> majoring in Electrical and Computer Engineering and minoring in Business. </p>
-                <p> Though sometimes I do wonder what my life would be like if I left everything and opened up a bakery shop in Lower Manhattan. </p>
-                <!-- <p> I combine my passion for design, engineering, and business to create products for anyone and everyone. </p> -->
-                <!-- <p> If you don't see me in Olin Library or Duffield for more than 24 hours, call the police. </p> -->
-            </div> <!--introText-->
-    </div> <!--intro-->
-
-    <div class="container">
-        <a href="projects.html">
-            <div class="parent">         
-                <div class="child-bloomberg"> </div> <!--featured-->
+    <div id="fade">
+        <div id="intro">
+            <div id="introHumaaan">
+            <canvas id="canvas" resize></canvas>
+                <div class="introText">
+                    <p> Hey there! I'm <span id="name">Francis</span>. </p>
+                    <p> I'm a senior at <a href="https://www.cornell.edu/">Cornell University</a> majoring in Electrical and Computer Engineering and minoring in Business. </p>
+                    <p> Though sometimes I do wonder what my life would be like if I left everything and opened up a bakery shop in Lower Manhattan. </p>
+                    <!-- <p> I combine my passion for design, engineering, and business to create products for anyone and everyone. </p> -->
+                    <!-- <p> If you don't see me in Olin Library or Duffield for more than 24 hours, call the police. </p> -->
+                </div> <!--introText-->
             </div>
-            <h1> BLOOMBERG </h1>
-            <p> See how I spent my summer as a Global Data Summer Analyst in 2019!</p>
-        </a>
+        </div> <!--intro-->
+
+        <div class="container">
+            <a href="projects.html">
+                <div class="parent">         
+                    <div class="child-bloomberg"> </div> <!--featured-->
+                </div>
+                <h1> BLOOMBERG </h1>
+                <p> See how I spent my summer as a Global Data Summer Analyst in 2019!</p>
+            </a>
+        </div>
     </div>
-    
     
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
