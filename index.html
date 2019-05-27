@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
 	<title>About Francis</title>
@@ -34,6 +34,13 @@
         margin: 0;
     }  
 
+    /* hr {
+        /* stroke-dasharray: 15%
+        height: 2px;
+        background-color:#ff8b94;
+       opacity: 0.5;
+    } */
+
     /* Scale canvas with resize attribute to full size */
     canvas[resize] {
         width: 100%;
@@ -63,7 +70,7 @@
         text-decoration: none;
         background-color: #ffefd7;
         border-radius: 5px;
-        transition-duration: 0.5s;
+        /* transition-duration: 0.5s; */
     }
 
     #about a {
@@ -102,7 +109,7 @@
         transition-duration: 0.5s;
     }
 
-    /* ----------- Introduction Design ----------- */
+    /* ----------- Introduction & Navigation Design ----------- */
     #intro {
 	    background-image: url("pictures/polaroid.jpg");  
         width:100%;
@@ -129,13 +136,14 @@
     .introText a {
         text-decoration: none;
         color: #ff8b94;
+        /* cursor: pointer; */
     }
 
     .introText a:hover {
         text-decoration: none;
         background-color: #ffefd7;
         border-radius: 5px;
-        transition-duration: 0.5s;
+        /* transition-duration: 0.5s; */
     }
 
     .nav1 {
@@ -148,6 +156,7 @@
         z-index:9999;
         width: 50%;
         text-align: left;
+        cursor: pointer;
         /* margin-left: 5%; */
     }
 
@@ -162,6 +171,7 @@
         position: relative;
     }
 
+    /* ----------- Container Design ----------- */
     .container {
         margin-left: 17%;
 	    margin-right: 5%;
@@ -173,7 +183,7 @@
     }
 
     .container a p {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Lato', sans-serif;
         color: #95989A;
         padding-bottom: 30px;
         line-height: 25px; 
@@ -181,10 +191,58 @@
         font-size: 20px;
     }
 
-    .bloomberg {
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 920px; 
+        height: 400px;
+        overflow: hidden;
+        display: inline-block;
+        cursor: pointer;
+        /* opacity: 0.9; */
+    }
+
+    .child-bloomberg {
+        width: 100%;
+        height: 100%;
+        background-color: black; /* fallback color */
+        background-image: url("pictures/bloomberg2.gif");
+        background-position: center;
+        background-size: cover;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent:hover .child-bloomberg, .parent:focus .child-bloomberg {
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .child-bloomberg::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child-bloomberg:before, .parent:focus .child-bloomberg:before {
+        display: block;
+    }
+
+    /* .bloomberg {
         display: block;
         position: relative;
         width: 100%;
+        height: 100%;
         padding-bottom: 40%;
         height: 0;	
         background-color: #badce6;
@@ -193,10 +251,10 @@
         background-size: cover;
         background-position: center;
         margin-bottom: 20px;	
-        transition: background-image 0.5s;
-        box-shadow: 2px 2px 10px #ededed;
+        box-shadow: 5px 5px 10px #ededed;
         opacity: 0.9;
-    }    
+        /* transition: background-image 0.5s; */
+    
     
 
 
@@ -218,15 +276,17 @@
             <div class="introText">
                 <p> Hey there! I'm <span id="name">Francis</span>. </p>
                 <p> I'm a senior at <a href="https://www.cornell.edu/">Cornell University</a> majoring in Electrical and Computer Engineering and minoring in Business. </p>
-                <p> I combine my passion for design, engineering, and business to create products for anyone and everyone. </p>
-                <p> If you don't see me in Olin Library or Duffield for more than 24 hours, call the police. </p>
+                <p> Though sometimes I do wonder what my life would be like if I left everything and opened up a bakery shop in Lower Manhattan. </p>
+                <!-- <p> I combine my passion for design, engineering, and business to create products for anyone and everyone. </p> -->
+                <!-- <p> If you don't see me in Olin Library or Duffield for more than 24 hours, call the police. </p> -->
             </div> <!--introText-->
     </div> <!--intro-->
 
     <div class="container">
         <a href="projects.html">
-            <div class="bloomberg"> 
-            </div> <!--featured-->
+            <div class="parent">         
+                <div class="child-bloomberg"> </div> <!--featured-->
+            </div>
             <h1> BLOOMBERG </h1>
             <p> See how I spent my summer as a Global Data Summer Analyst in 2019!</p>
         </a>
