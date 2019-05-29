@@ -22,6 +22,16 @@
         color: #545454;
         width: 50%;
 	}
+
+    h2 { 
+		font-family: 'Quicksand', sans-serif; 
+		font-size: 16pt; 
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #545454;
+        width: 50%;
+	}
+
 	body {
 		background-color: white;
 		/* text-align: center; */
@@ -205,6 +215,7 @@
         margin-left: 17%;
 	    margin-right: 5%;
 	    margin-bottom: 5%;
+        
     }
 
     .container a {
@@ -220,23 +231,49 @@
         font-size: 20px;
     }
 
-    /* ----------- Hover Effect Design ----------- */
-    .parent {
-        width: 920px; 
-        height: 400px;
-        overflow: hidden;
+    .featuredProjects {
+        width: 102.5%;
         display: inline-block;
-        cursor: pointer;
-        /* opacity: 0.9; */
     }
 
-    .child-bloomberg {
+    .featuredProjects div, h2 {
+        position: relative;
+        width: 100%;
+        /* padding-bottom: 45%; */
+        margin-bottom: 20px;
+    }
+
+    .featuredProjects a {
+        display: inline-block;
+        width: 47.5%;
+        padding-right: 2%;
+        vertical-align: top;
+    } 
+
+    .featuredProjects a p {
+        font-family: 'Lato', sans-serif;
+        color: #95989A;
+        padding-bottom: 30px;
+        line-height: 25px; 
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 40%;
+        /* margin-right: 20px; */
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .child {
         width: 100%;
         height: 100%;
-        background-color: black; /* fallback color */
-        background-image: url("pictures/bloomberg2.gif");
-        background-position: center;
-        background-size: cover;
+        background-color: #badce6; /*  fallback color */
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         -o-transition: all .3s;
@@ -245,7 +282,7 @@
         
     }
 
-    .parent:hover .child-bloomberg, .parent:focus .child-bloomberg {
+    .parent:hover .child, .parent:focus .child {
         -ms-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -webkit-transform: scale(1.2);
@@ -253,7 +290,7 @@
         transform: scale(1.2);
     }
 
-    .child-bloomberg::before {
+    .child::before {
         content: "";
         display: none;
         height: 100%;
@@ -263,11 +300,27 @@
         left: 0;
     }
 
-    .parent:hover .child-bloomberg:before, .parent:focus .child-bloomberg:before {
+    .parent:hover .child:before, .parent:focus .child:before {
         display: block;
     }
 
-    /* .bloomberg {
+    .test {
+        background-color: #badce6;
+        background-image: url("pictures/background.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .new {
+        background-color: #badce6;
+        background-image: url("pictures/background.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bloomberg {
         display: block;
         position: relative;
         width: 100%;
@@ -275,16 +328,15 @@
         padding-bottom: 40%;
         height: 0;	
         background-color: #badce6;
-        background-image: url("pictures/bloomberg.gif"); 
+        background-image: url("pictures/bloomberg2.gif"); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         margin-bottom: 20px;	
         box-shadow: 5px 5px 10px #ededed;
-        opacity: 0.9;
         /* transition: background-image 0.5s; */
     
-    
+    }
 
 
 </style>
@@ -315,18 +367,44 @@
         </div> <!--intro-->
 
         <div class="container">
+
             <a href="projects.html">
-                <div class="parent">         
-                    <div class="child-bloomberg"> </div> <!--featured-->
-                </div>
+                <div class="bloomberg" onclick=""></div>
                 <h1> BLOOMBERG </h1>
                 <p> See how I spent my summer as a Global Data Summer Analyst in 2019!</p>
             </a>
+        
+            <div class="featuredProjects">
+
+                <a href="projects.html">
+                    <div class="parent" onclick="">         
+                        <div class="child test"> </div>  <div class="child new"> </div> <!-- RESEARCH -->
+                    </div>
+                    <h2> COMMUNICATION & COLLABORATIVE TECHNOLOGIES LAB </h2>
+                    <p> Check out my research! </p>
+                </a>
+
+                <a href="projects.html">
+                    <div class="parent" onclick="">         
+                        <div class="child new"> </div> <!-- PROJECT TEAM -->
+                    </div>
+                    <h2> CORNELL CONCRETE CANOE </h2>
+                    <p> A collection of work curated for one of Cornell's engineering project teams. </p>
+                </a>
+
+                <a href="projects.html">
+                    <div class="parent" onclick="">         
+                        <div class="child new"> </div> <!-- PROJECT TEAM -->
+                    </div>
+                    <h2> PHOTOGRAPHY </h2>
+                    <p> A collection of work curated for one of Cornell's engineering project teams. </p>
+                </a>
+
+            </div>
+            
         </div>
     </div>
-    
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <script src="scripts/portfolio.js"></script>
 </body>
