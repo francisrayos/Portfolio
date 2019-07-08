@@ -9,7 +9,8 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/paper-full.js"></script>
     <script type="text/paperscript" src="scripts/canvas-index.js" canvas="canvas"></script>
-    
+    <script src="scripts/portfolio.js"></script>
+
 </head>
 
 <style>
@@ -34,7 +35,7 @@
 
 	body {
 		background-color: white;
-		/* text-align: center; */
+		
 		font-family: 'Quicksand', sans-serif;
 	}
 
@@ -177,6 +178,7 @@
         width: 50%;
         text-align: left;
         cursor: pointer;
+
         /* margin-left: 5%; */
     }
 
@@ -283,11 +285,11 @@
     }
 
     .parent:hover .child, .parent:focus .child {
-        -ms-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
+        -ms-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
     }
 
     .child::before {
@@ -309,6 +311,22 @@
         background-image: url("pictures/canoe.gif"); 
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+    }
+
+    .research {
+        background-color: #badce6;
+        background-image: url("pictures/research.gif"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey {
+        background-color: #E6FAF9;
+        background-image: url("pictures/journey.png"); 
+        background-repeat: no-repeat;
+        background-size: 60% 50%;
         background-position: center;
     }
 
@@ -342,13 +360,12 @@
 </style>
 
 <body>
-    
 
     <ul class="nav1"> 
         <img src="pictures/frds.png" id="logo"><br><br>
         <li id="home">  <a href="index.html"> HOME</a></li>
         <li id="about"> <a href="about.html"> ABOUT</a></li>
-        <li id="projects">  <a href="projects.html"> PROJECTS</a></li>
+        <li class="projects" id="projects" > <a href="" >PROJECTS</a></li>
         <li id="contact">  <a href="contact.html"> CONTACT</a></li>
     </ul>
     
@@ -366,10 +383,10 @@
             </div>
         </div> <!--intro-->
 
-        <div class="container">
+        <div class="container" id="container">
 
             <a href="projects.html">
-                <div class="bloomberg" onclick=""></div>
+                <div class="bloomberg" id="bloomberg" onclick=""></div>
                 <h1> BLOOMBERG </h1>
                 <p> See how I spent my summer as a Global Data Summer Analyst in 2019! </p>
             </a>
@@ -378,7 +395,7 @@
 
                 <a href="projects.html">
                     <div class="parent" onclick="">         
-                        <div class="child test"> </div> <!-- RESEARCH -->
+                        <div class="child research"> </div> <!-- RESEARCH -->
                     </div>
                     <h2> COMMUNICATION & COLLABORATIVE TECHNOLOGIES LAB </h2>
                     <p> Check out my research! </p>
@@ -394,7 +411,7 @@
 
                 <a href="projects.html">
                     <div class="parent" onclick="">         
-                        <div class="child test"> </div> <!-- PROJECT TEAM -->
+                        <div class="child journey"> </div> <!-- PROJECT TEAM -->
                     </div>
                     <h2> JOURNEY MEDITATION </h2>
                     <p> Selected projects from my time as an intern at a New York City health and wellness startup! </p>
@@ -412,9 +429,8 @@
             
         </div>
     </div>
-
-
     <script src="scripts/portfolio.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </body>
 
 </html>

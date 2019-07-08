@@ -1,3 +1,74 @@
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+
+// $(document).ready(function () {  
+//     $('#projects').click(function(event){
+//       event.preventDefault();
+//       $('#bloomberg').scrollIntoView(true);
+//       // let your tab id is woocommerce-tabs
+//     });
+// });
+// const btn = document.getElementById('projects');
+
+// btn.addEventListener('click', () => window.scrollTo({
+//   top: 500,
+//   behavior: 'smooth',
+// }));
+
+// window.scrollTo({
+//     top: 0,
+//     left: 100,
+//     behavior: 'smooth'
+// })
+
+// var projects = d3.select("projects")
+
+// projects.on("click", function() {
+
+
+//window.scrollTo(0, document.getElementById('bloomberg').offsetTop - document.getElementsByClassName('projects')[0].offsetHeight);
+
+
+// Zdocument.getElementById("bloomberg").scrollIntoView({ behavior: 'smooth' });
+// $('a[href^="#"]').on('click', function(event) {
+
+//     var target = $(this.getAttribute('href'));
+
+//     if( target.length ) {
+//         event.preventDefault();
+//         $('html, body').stop().animate({
+//             scrollTop: target.offset().top
+//         }, 1000);
+//     }
+
+// });
+// })
+
+
+
+
 // --------- ATTEMPT #1 ---------
 
 // SETUP CANVAS
