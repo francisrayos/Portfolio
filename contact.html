@@ -33,6 +33,7 @@
         width:  100%;
         height: 100%;
         margin: 0;
+        scroll-behavior: smooth;
     }  
 
     /* Scale canvas with resize attribute to full size */
@@ -213,6 +214,12 @@
         margin-left: 1%;
     }
 
+    #github  {
+        width: 80px;
+        height: 80px;
+        margin-left: 1%;
+    }
+
     #linkedin {
         transition: filter .2s ease-in-out;
         -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
@@ -235,6 +242,17 @@
         filter: grayscale(0%); /* FF 35+ */
     }
 
+    #github {
+        transition: filter .2s ease-in-out;
+        -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(100%); /* FF 35+ */
+    }
+
+    #github:hover{
+        -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+        filter: grayscale(0%); /* FF 35+ */
+    }
+
 </style>
 
 <body>
@@ -243,7 +261,7 @@
         <img src="pictures/frds.png" id="logo"><br><br>
         <li id="home">  <a href="index.html"> HOME</a></li>
         <li id="about"> <a href="about.html"> ABOUT</a></li>
-        <li id="projects">  <a href="projects.html"> PROJECTS</a></li>
+        <li id="projects">  <a href="index.html#bloomberg"> PROJECTS</a></li>
         <li id="contact">  <a href="contact.html"> CONTACT</a></li>
     </ul>
 
@@ -254,6 +272,7 @@
             <p> I promise I don't bite. </p>
             <a href="https://www.linkedin.com/in/francis-rayos-del-sol/"><img src="pictures/linkedin.png" id="linkedin"></a>
             <a href="mailto:fmr32@cornell.edu"><img src="pictures/gmail.png" id="gmail"></a>
+            <a href="https://www.github.com/francisrayos"><img src="pictures/github.png" id="github"></a>
         </div>
     </div>
 
