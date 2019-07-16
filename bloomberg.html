@@ -194,7 +194,7 @@
         margin-right: auto;
         margin-left: auto;
         text-align: center;
-        padding-bottom: 5%;
+        /* padding-bottom: 5%; */
     }
 
     .postBody h1 {
@@ -316,6 +316,12 @@
                 <p>
                     Bloomberg's Foreign Exchange analysts and Team Leaders utilized this data accuracy checker tool on a daily basis, which essentially allowed them to expedite the process of being notified when any cryptocurrency was inaccurately priced for its clients.
                 </p>
+            </div>
+            <pre>
+                <code id="display1" class="hljs javascript">
+                </code>
+            </pre>
+            <div class="postBody">
                 <h2>ENTITY PIPELINE</h2>
                 <p>
                     One of the Message Mining team's responsibilities at Bloomberg is to scrape client messages for specific securities and other pricing information because the majority of its clients operate on an over-the-counter market. The team currently has a machine learning algorithm in place to detect this information, but because of the wide variety in the ways a security could be disclosed, the algorithm produces a certain level of error, which leads to currently analysts manually correcting these misscrapes.
@@ -330,10 +336,10 @@
                     Bloomberg's Message Mining Team has currently annotated over 400k client messages to date and is currently looking to implement this scraping enhancement by June 2020.
                 </p>
             </div>
-            <!-- <pre>
-                <code id="display1" class="hljs javascript">
+            <pre>
+                <code id="display2" class="hljs javascript">
                 </code>
-            </pre> -->
+            </pre>
         </div>
     </div>
 
@@ -481,8 +487,13 @@
         // final_px.to_csv('final_px.csv', index = True)
     </script>
 
+    <script id="test">
+        /******** FOR SECURITY PURPOSES, I AM NOT AUTHORIZED TO RELEASE CODE JUST YET. STAY TUNED! ********/
+    </script>
+
     <script>
-    document.getElementById("display1").innerText = document.getElementById("first").innerText;
+    document.getElementById("display1").innerText = document.getElementById("test").innerText;
+    document.getElementById("display2").innerText = document.getElementById("test").innerText;
     hljs.initHighlightingOnLoad();
     </script>
 

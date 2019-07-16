@@ -1,0 +1,278 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Quicksand" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+
+	<title>About Francis</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="scripts/paper-full.js"></script>
+    <script type="text/paperscript" src="scripts/canvas-index.js" canvas="canvas"></script>
+    
+</head>
+
+<style>
+	
+	h1 { 
+		font-family: 'Quicksand', sans-serif; 
+		font-size: 30pt; 
+		color: white;
+	}
+	body {
+		background-color: white;
+		/* text-align: center; */
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+
+    html, body {
+        width:  100%;
+        height: 100%;
+        margin: 0;
+    }  
+
+    /* Scale canvas with resize attribute to full size */
+    canvas[resize] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+
+    #name {
+        font-family: 'Bad Script', cursive;
+        font-size: 120%;
+    }
+
+    /* ----------- Toolbar Design ----------- */
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #home a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #home a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #about a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #about a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #projects a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #projects a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #contact a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #contact a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    /* ----------- Introduction Design ----------- */
+    #intro {
+	    background-image: url("pictures/polaroid.jpg");  
+        width:100%;
+        height: 112vh;
+        background-repeat: no-repeat;
+        background-size: 300px 346px;
+        background-position: 75% 25%;
+        /* font-family: 'Avenir'; */
+        src: url(fonts/Avenir-Medium.otf);
+        position: relative;
+        color: #545454;
+        font-size: 150%; 
+        /* z-index: 0; */
+    }
+
+    .introText {
+        width: 30%;
+        padding-top: 12%;
+        padding-left: 17%;
+        display: block;
+        position: absolute;
+
+    } 
+
+    .introText a {
+        text-decoration: none;
+        color: #ff8b94;
+    }
+
+    .introText a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    .nav1 {
+        list-style: none;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 22px;
+        font-weight: bolder;
+        color: #385170;
+        position: fixed;
+        z-index:9999;
+        width: 50%;
+        text-align: left;
+        /* margin-left: 5%; */
+    }
+    .introText p {
+        position: relative;
+    }
+
+    /* ----------- Bloomberg Page Design ----------- */
+    .container {
+        margin-left: 17%;
+	    margin-right: 5%;
+	    margin-bottom: 5%;
+        
+    }
+
+    .container a {
+        text-decoration: none;
+    }
+
+    .container a p {
+        font-family: 'Titillium Web', sans-serif;
+        color: #95989A;
+        padding-bottom: 30px;
+        line-height: 25px; 
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .cover {
+        width: 100%; 
+        padding-top: 30px;
+        position: relative;
+    }
+
+    .cover img {
+        width: 100%;
+    }
+
+    #jpg {
+        background-color: #E6FAF9;
+        box-shadow: 5px 5px 10px #ededed;
+    }
+
+    .postBody {
+        padding-top: 40px;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+    .postBody h1 {
+        font-family: 'Quicksand';
+        width: 100%;
+        color: #B3EDF2;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        letter-spacing: 2px;
+    }
+
+    .postBody h2 {
+        font-family: 'Quicksand';	
+        font-size: 25px;
+        color: #B3EDF2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .postBody p {
+        width: 80%;
+        text-align: justify;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        color: #95989A;
+        padding-bottom: 5px;
+        line-height: 27px;
+        margin-top: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .postBody img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
+
+</style>
+
+<body>
+    <ul class="nav1"> 
+        <img src="pictures/frds.png" id="logo"><br><br>
+        <li id="home">  <a href="index.html"> HOME</a></li>
+        <li id="about"> <a href="about.html"> ABOUT</a></li>
+        <li id="projects">  <a href="index.html#bloomberg"> PROJECTS</a></li>
+        <li id="contact">  <a href="contact.html"> CONTACT</a></li>
+    </ul>
+
+    <div id="fade">
+        <div class="container">
+            <div class="cover">
+                <img src="pictures/journey-cover.jpg" id="jpg"><br><br>
+            </div>
+
+            <div class="postBody">
+                <h1>JOURNEY MEDITATION</h1>
+                <p>
+                    In the summer of 2017, I was fortunate enough to work as a Sales and Operations Intern for Journey Meditation, a fast-growing health and wellness startup. Journey believes in the power of human connection and are creating the world's largest meditation community, both online and off. They help high-performance organizations, such as Nike, Facebook, and Disney, to reduce stress and increase performance. Here are some samples of some of the projects I played a role in during my time there.
+                </p>
+                <p>
+                    Journey Meditation is primarily a B2B company but has recently expanded into becoming an interactive smartphone app experience for everyday consumers to enjoy. In the early stages of development for the company, one of my main responsibilities was to help curate content and the design for the weekly newsletter, aimed at clients who attended community classes and who were employees of Journey's main clients.
+                </p>
+                <p>
+                    Journey Meditation primarily instigated the start of a transition from a purely B2B business model to a more general public consumer focus of this. Because of this, one of their main initiatives was to create design mockups and wireframes of the Journey Meditation app—now known as Journey Meditation LIVE on the app store.
+                </p>
+                <p>
+                    The company primarily provides meditation teaching services to firms in industries that have been proven to have employees with generally higher stress levels. However, at the start of the internship, there were companies within an industry that had yet to be tapped—law firms. Due to the growing need to expand the portfolio of Journey's clients, I conducted a data-based exploratory analysis on the top U.S. law firms as well as the best points of contact within these firms and developed a portfolio for the company's CEO, guiding him on where to pursue relationships further. These signed contracts totaled to over $51k in sales for Journey Meditation.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/portfolio.js"></script>
+</body>
+
+</html>
