@@ -1,0 +1,493 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Quicksand" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+
+	<title>About Francis</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="scripts/paper-full.js"></script>
+    <script type="text/paperscript" src="scripts/canvas-index.js" canvas="canvas"></script>
+    
+</head>
+
+<style>
+	
+	h1 { 
+		font-family: 'Quicksand', sans-serif; 
+		font-size: 30pt; 
+		color: white;
+	}
+	body {
+		background-color: white;
+		/* text-align: center; */
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+
+    html, body {
+        width:  100%;
+        height: 100%;
+        margin: 0;
+    }  
+
+    /* Scale canvas with resize attribute to full size */
+    canvas[resize] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+
+    #name {
+        font-family: 'Bad Script', cursive;
+        font-size: 120%;
+    }
+
+    /* ----------- Toolbar Design ----------- */
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #home a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #home a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #about a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #about a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #projects a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #projects a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    #contact a {
+        text-decoration: none;
+        color: #385170;
+    }
+
+    #contact a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    /* ----------- Introduction Design ----------- */
+    #intro {
+	    background-image: url("pictures/polaroid.jpg");  
+        width:100%;
+        height: 112vh;
+        background-repeat: no-repeat;
+        background-size: 300px 346px;
+        background-position: 75% 25%;
+        /* font-family: 'Avenir'; */
+        src: url(fonts/Avenir-Medium.otf);
+        position: relative;
+        color: #545454;
+        font-size: 150%; 
+        /* z-index: 0; */
+    }
+
+    .introText {
+        width: 30%;
+        padding-top: 12%;
+        padding-left: 17%;
+        display: block;
+        position: absolute;
+
+    } 
+
+    .introText a {
+        text-decoration: none;
+        color: #ff8b94;
+    }
+
+    .introText a:hover {
+        text-decoration: none;
+        background-color: #ffefd7;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+    }
+
+    .nav1 {
+        list-style: none;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 22px;
+        font-weight: bolder;
+        color: #385170;
+        position: fixed;
+        z-index:9999;
+        width: 50%;
+        text-align: left;
+        /* margin-left: 5%; */
+    }
+    .introText p {
+        position: relative;
+    }
+
+    /* ----------- Bloomberg Page Design ----------- */
+    .container {
+        margin-left: 17%;
+	    margin-right: 5%;
+	    margin-bottom: 5%;
+        
+    }
+
+    .container a {
+        text-decoration: none;
+    }
+
+    .container a p {
+        font-family: 'Titillium Web', sans-serif;
+        color: #95989A;
+        padding-bottom: 30px;
+        line-height: 25px; 
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .cover {
+        width: 100%; 
+        padding-top: 30px;
+        position: relative;
+    }
+
+    .cover img {
+        width: 100%;
+    }
+
+    #gif {
+        box-shadow: 5px 5px 10px #ededed;
+    }
+
+    .postBody {
+        padding-top: 40px;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+    .postBody h1 {
+        font-family: 'Quicksand';
+        width: 100%;
+        color: #B3EDF2;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        letter-spacing: 2px;
+    }
+
+    .postBody h2 {
+        font-family: 'Quicksand';	
+        font-size: 25px;
+        color: #B3EDF2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .postBody p {
+        width: 80%;
+        text-align: justify;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        color: #95989A;
+        padding-bottom: 5px;
+        line-height: 27px;
+        margin-top: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .postBody img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+    /**
+    * Contain overflow in all browsers.
+    */
+
+    pre {
+        overflow: auto;
+    }
+
+    /**
+    * Address odd `em`-unit font size rendering in all browsers.
+    */
+
+    code,
+    pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        color: #95989A;
+    }
+
+
+    code {
+        padding: .2rem .5rem;
+        margin: 0 .2rem;
+        font-size: 90%;
+        white-space: nowrap;
+        background: #F1F1F1;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px; 
+    }
+    pre > code {
+        display: block;
+        padding: 1rem 1.5rem;
+        /* white-space: pre;  */
+    }
+
+
+
+
+
+</style>
+
+<body>
+
+    <ul class="nav1"> 
+        <img src="pictures/frds.png" id="logo"><br><br>
+        <li id="home">  <a href="index.html"> HOME</a></li>
+        <li id="about"> <a href="about.html"> ABOUT</a></li>
+        <li id="projects">  <a href="index.html#bloomberg"> PROJECTS</a></li>
+        <li id="contact">  <a href="contact.html"> CONTACT</a></li>
+    </ul>
+
+    <div id="fade">
+        <div class="container">
+            <div class="cover">
+                <img src="pictures/bloomberg.gif" id="gif"><br><br>
+            </div>
+
+            <div class="postBody">
+                <h1>BLOOMBERG</h1>
+                <p>
+                    In the summer of 2019, I had the opportunity to work in Bloomberg's Global Data department as an intern on the Message Mining / Foreign Exchange teams. During my time as an intern, I optimized team workflows, provided data enhancement tools, and much more. Here's a collection of my projects during my three months at Bloomberg.
+                </p>
+                <h2>CRYPTOCURRENCY CHECK</h2>
+                <p>
+                    Bloomberg is a world leader in providing the most accurate, real time data to its clients and the rest of the financial market. Because of this, producing the highest quality data for the Terminal is expected. And as one of thousands of functionalities of the Bloomberg Terminal, the foreign exchange pricing that the company produces does not fall short of this expectation.
+                </p>
+                <p>
+                    Bloomberg currently has an indicative pricing option, known as the Bloomberg Generic Price (BGN), that produces dozens of tickers every minute and allows clients to see where a current exchange rate is pricing within the market. The company also produces a fixed pricing option for cryptocurrencies based on this BGN price, known as the Common Fix Price (CFIX). The CFIX produces the average price of BGN ticks that come in between 4:00 PM and 4:15 PM EST each weekday, outputting a price on the Terminal at 4:16 PM.
+                </p>
+                <p>
+                    However, due to technical complications ranging from the company;s CFIX algorithm to machine malfunctions, there have been instances for cryptocurrencies specifically where Bloomberg;s CFIX does not release a price on a working day.
+                </p>
+                <p>
+                    That's where I came in.
+                </p>
+                <p>
+                    One of the first few projects during my summer was to conduct on a ticker analysis using an internal Terminal-compatible script editor, known as BQuant, that would check if the CFIX pricing source actually produced a price at 4:16 PM EST. If yes, the running script would simply output the average of both the bid and ask prices of the respective cryptocurrencies as well as the time it had been released. If not, the script would determine the CFIX price by taking the latest BGN price that priced before 4:00 PM EST. The result would be an exportable .csv file that would outline the last bid and ask price for each cryptocurrency and the exact time it was priced.
+                </p>
+                <p>
+                    Bloomberg's Foreign Exchange analysts and Team Leaders utilized this data accuracy checker tool on a daily basis, which essentially allowed them to expedite the process of being notified when any cryptocurrency was inaccurately priced for its clients.
+                </p>
+                <h2>ENTITY PIPELINE</h2>
+                <p>
+                    One of the Message Mining team's responsibilities at Bloomberg is to scrape client messages for specific securities and other pricing information because the majority of its clients operate on an over-the-counter market. The team currently has a machine learning algorithm in place to detect this information, but because of the wide variety in the ways a security could be disclosed, the algorithm produces a certain level of error, which leads to currently analysts manually correcting these misscrapes.
+                </p>
+                <p>
+                    As a result, in an attempt to fully automate the process, the Message Mining team hires contract workers to feed accurate data sent to natural language processing engineers to further enhance the scraping tool. And in order to ensure that the data being fed through this internal crowdsourcing system, Message Mining analysts currently evaluate these workers on their overall quality performance scores, which takes into account how their annotation results compare to the "gold copy", how they compare to other annotators, etc. The current process in place is to evaluate data dumps of the agreement statistics provided by the aggregate data and manually feed each of these files with multiple project ID’s into their user-friendly dashboard that displays performance statistics.
+                </p>
+                <p>
+                    In order to optimize four different analysts workflow, I created a Python script that pulled all of these data dump files from their internal system, combined these .csv's into one master file, and wrote to one of Bloomberg's internal databases for analysts to access using MySQL, QlikSense, etc. From there, analysts were able to get a comprehensive understanding of their annotator's performance x times faster than before, where x represents the number of projects an analyst was currently overseeing.
+                </p>
+                <p>
+                    Bloomberg's Message Mining Team has currently annotated over 400k client messages to date and is currently looking to implement this scraping enhancement by June 2020.
+                </p>
+            </div>
+            <!-- <pre>
+                <code id="display1" class="hljs javascript">
+                </code>
+            </pre> -->
+        </div>
+    </div>
+
+    <script id="first">
+        // import pandas as pandas
+        // from pandas import Timestamp
+        // import os
+        // import bqapi as bq
+        // import pyrefdata
+        // from pyrefdata import get_intraday_tick_data
+        // import datetime
+        // import pytz
+        // import bqfunc
+
+        // sess = bq.Session()
+        // nytz = pytz.timezone('US/Eastern')
+
+        // ### TO-DO: UPDATE CURRENT DATE
+        // current_month = 6
+        // current_day = 24
+        // current_year = 2019
+
+        // # 4:00:00 PM - 4:14:59 Time Slot
+        // round1_start = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 16))
+        // round1_end = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 16, minute = 14, second = 59))
+
+        // # 4:15:00 PM - 4:19:59 Time Slot
+        // round2_start = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 16, minute = 15))
+        // round2_end = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 16, minute = 19, second = 59))
+
+        // # Before 4 PM Time Slot
+        // round3_start = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 15, minute = 59, second = 30))
+        // round3_end = nytz.localize(datetime.datetime(
+        //     year = current_year, month = current_month, day = current_day, hour = 15, minute = 59, second = 59))
+
+        // final_px = pd.DataFrame()
+
+        // # CFIX TICKER LIST
+        // ticker_cfix = [
+        //     "XBT CFIX Curncy",
+        //     "XBN CFIX Curncy",
+        //     "XDH CFIX Curncy",
+        //     "XET CFIX Curncy",
+        //     "XLC CFIX Curncy",
+        //     "XMR CFIX Curncy",
+        //     "XZC CFIX Curncy",
+        //     "XTH CFIX Curncy",
+        //     "XEO CFIX Curncy",
+        //     "XRP CFIX Curncy"
+        // ]
+
+        // # BGN TICKER LIST
+        // ticker_bgn = [
+        //     "XBT BGN Curncy",
+        //     "XBN BGN Curncy",
+        //     "XDH BGN Curncy",
+        //     "XET BGN Curncy",
+        //     "XLC BGN Curncy",
+        //     "XMR BGN Curncy",
+        //     "XZC BGN Curncy",
+        //     "XTH BGN Curncy",
+        //     "XEO BGN Curncy",
+        //     "XRP BGN Curncy"
+        // ]
+
+        // # 4:00:00 PM - 4:14:59 Time Slot - BASE CASE
+        // for curr in ticker_cfix:
+        //     round1_data = get_intraday_tick_data(sess, curr,['BID', 'ASK'], round1_start, round1_end)
+
+        // # 4:15:00 PM - 4:19:59 Time Slot
+        // if round1_data.empty:
+        //     for cfix_curr in ticker_cfix:
+        //         round2_data = get_intraday_tick_data(sess, cfix_curr, ['BID', 'ASK'], round2_start, round2_end)
+
+        //         lst_dict = []
+
+        //         for index, row in round2_data.iterrows():
+        //             if row['value'] != None:
+        //                 print(cfix_curr + "'s" + row['type'] + 'price' + str(row['value']) + ' at ' +
+        //                     str(index)[11:19] + ' on ' + str(index)[0:10])
+
+        //                 ### GET OUTPUT AS CSV
+        //                 lst_dict.append({'currency': cfix_curr, 'type': row['type'], 'value': row['value'],
+        //                     'time': str(index)[11:19], 'date': str(index)[0:10], 'priced': 'Yes'})
+        //                 final_px = final_px.append(lst_dict, ignore_index = True).drop_duplicates()
+
+        //             else:
+        //                 ### PRINT OUTPUT
+        //                 print("There is no CFIX value for " + str(cfix_curr) + "from 4:15 PM to 4:20 PM.")
+
+        //                 ### GET OUTPUT AS CSV
+        //                 lst_dict.append({'currency': cfix_curr, 'type': row['type'], 'value': row['value'],
+        //                     'time': str(index)[11:19], 'date': str(index)[0:10], 'priced': 'No'})
+        //                 final_px = final_px.append(lst_dict, ignore_index = True).drop_duplicates()
+
+        // # PRICE DOES NOT APPEAR FROM 4 PM - 4:20 PM
+        // if round2_data.empty:
+        //     for bgn_curr in ticker_bgn:
+        //         round3_data = get_intraday_tick_data(sess, bgn_curr, ['BID', 'ASK'], round3_start, round3_end)
+
+        //         ### CALCULATE MOST RECENT BGN VALUES
+        //         last_bid_value = 0
+        //         last_ask_value = 0
+
+        //         lst_dict = []
+
+        //         for index, row in round3_data.iterrows():
+        //             round3_data['datetime'] = round3_data.index
+        //             if (row['value'] != None and row['type'] == 'BID'):
+        //                 bid_values = round3_data.loc[round3_data['type'] == 'BID']
+        //                 last_bid_value = bid_values.iloc[-1]['value']
+        //                 last_bid_timestamp = bid_values.iloc[-1]['datetime']
+
+        //             elif (row['value'] != None and row['type'] == 'ASK'):
+        //                 ask_values = round3_data.loc[round3_data['type'] == 'ASK']
+        //                 last_ask_value = ask_values.iloc[-1]['value']
+        //                 last_ask_timestamp = ask_values.iloc[-1]['datetime']
+
+        //             else:
+        //                 print("There is no security value for " + bgn_curr + " from the day before.")
+
+        //         ### GET OUTPUT AS CSV
+        //         lst_dict.append({'currency': bgn_curr, 'type': 'BID', 'last_bid_value': last_bid_value,
+        //             'date': str(last_bid_timestamp)[0:10], 'timeStamp': str(last_bid_timestamp)[11:19],
+        //             'priced': 'No'})
+        //         lst_dict.append({'currency': bgn_curr, 'type': 'ASK', 'last_ask_value': last_ask_value,
+        //             'date': str(last_ask_timestamp)[0:10], 'timeStamp': str(last_ask_timestamp)[11:19],
+        //             'priced': 'No'})  
+        //         final_px = final_px.append(lst_dict, ignore_index = False).drop_duplicates()
+
+        //         ### PRINT OUTPUT
+        //         print('There is no CFIX value from 4 PM to 4:20 PM on ' + str(last_bid_timestamp)[0:10] +
+        //             ' The latest ' + bgn_curr + ' ' + row['type'] + ' price is ' + str(last_bid_value) +
+        //             ' at ' + str(last_bid_timestamp)[11:19])
+        //         print('There is no CFIX value from 4 PM to 4:20 PM on ' + str(last_ask_timestamp)[0:10] +
+        //             ' The latest ' + bgn_curr + ' ' + row['type'] + ' price is ' + str(last_ask_value) +
+        //             ' at ' + str(last_ask_timestamp)[11:19])
+
+        // # UPLOAD TO CSV
+        // final_px.to_csv('final_px.csv', index = True)
+    </script>
+
+    <script>
+    document.getElementById("display1").innerText = document.getElementById("first").innerText;
+    hljs.initHighlightingOnLoad();
+    </script>
+
+
+    <script src="scripts/portfolio.js"></script>
+</body>
+
+</html>
