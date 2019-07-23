@@ -153,6 +153,67 @@
         position: relative;
     }
 
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 290;
+        margin-right: 10px;
+        height: 380px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .child {
+        width: 100%;
+        height: 100%;
+        background-color: #badce6; /*  fallback color */
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent:hover .child, .parent:focus .child {
+        -ms-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    .child::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child:before, .parent:focus .child:before {
+        display: block;
+    }
+
+    .imageWork {
+        padding-top: 40px;
+        padding-left: 20px;
+        /* width: 90%; */
+        /* margin-right: auto; */
+        /* margin-left: auto;  */
+        text-align: center;
+        /* padding-bottom: 5%; */
+    }
+
+    .imageWork img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
     /* ----------- Bloomberg Page Design ----------- */
     .container {
         margin-left: 17%;
@@ -235,17 +296,12 @@
         margin-bottom: 20px;
         margin-top: 18px;
     }
-    /**
-    * Contain overflow in all browsers.
-    */
+
+    /* ----------- Code Snippet Design ----------- */
 
     pre {
         overflow: auto;
     }
-
-    /**
-    * Address odd `em`-unit font size rendering in all browsers.
-    */
 
     code,
     pre {
@@ -253,7 +309,6 @@
         font-size: 1em;
         color: #95989A;
     }
-
 
     code {
         padding: .2rem .5rem;
@@ -270,8 +325,29 @@
         /* white-space: pre;  */
     }
 
+    .bloomberg-fun {
+        background-color: #badce6;
+        background-image: url("pictures/bloomberg-fun.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
+    .bloomberg-fun2 {
+        background-color: #badce6;
+        background-image: url("pictures/bloomberg-fun2.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
+    .bloomberg-fun3 {
+        background-color: #badce6;
+        background-image: url("pictures/bloomberg-fun3.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
 
 </style>
@@ -340,6 +416,22 @@
                 <code id="display2" class="hljs javascript">
                 </code>
             </pre>
+            <div class="postBody">
+                <h2>THANK YOU, BLOOMBERG!</h2>
+            </div>
+            <div class="imageWork">
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child bloomberg-fun"></div>
+                </div>
+
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child bloomberg-fun2"></div>
+                </div>
+
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child bloomberg-fun3"></div>
+                </div>
+            </div>
         </div>
     </div>
 
