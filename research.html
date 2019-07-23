@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Quicksand" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
-	<title>About Francis</title>
+	<title>Rayos del Sol Design</title>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/paper-full.js"></script>
@@ -153,7 +153,68 @@
         position: relative;
     }
 
-    /* ----------- Bloomberg Page Design ----------- */
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 290;
+        margin-right: 10px;
+        height: 380px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .child {
+        width: 100%;
+        height: 100%;
+        background-color: #badce6; /*  fallback color */
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent:hover .child, .parent:focus .child {
+        -ms-transform: scale(1.0);
+        -moz-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        -o-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+
+    .child::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child:before, .parent:focus .child:before {
+        display: block;
+    }
+
+    .imageWork {
+        /* padding-top: 40px; */
+        padding-left: 20px;
+        /* width: 90%; */
+        /* margin-right: auto; */
+        /* margin-left: auto;  */
+        text-align: center;
+        /* padding-bottom: 5%; */
+    }
+
+    .imageWork img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
+    /* ----------- Research Page Design ----------- */
     .container {
         margin-left: 17%;
 	    margin-right: 5%;
@@ -236,6 +297,29 @@
         margin-top: 18px;
     }
 
+    .qualtrics1 {
+        background-color: #badce6;
+        background-image: url("pictures/qualtrics1.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .qualtrics2 {
+        background-color: #badce6;
+        background-image: url("pictures/qualtrics2.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .qualtrics3 {
+        background-color: #badce6;
+        background-image: url("pictures/qualtrics3.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
 </style>
 
@@ -266,9 +350,23 @@
                 <p>
                     One facet of my research involved implementing a Qualtrics survey using JavaScript for research study participants to use that involved randomizing high frequency and low frequency words and testing whether or not these non-native speakers were familiar with and understood the meaning behind these random English words. The purpose of this is to feed aggregate data into a natural language processing algorithm that would detect both easy and difficult English words into a speech-to-text translator.
                 </p>
+            </div>
+            <div class="imageWork">
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child qualtrics1"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child qualtrics2"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                    <div class="child qualtrics3"></div>
+                </div>
+            </div>
+            <div class="postBody">
                 <p>
                     From a more user-focused perspective, as a student researcher I had the opportunity to compose a confederate script for nonnative speaker study participants to engage with, and this study involved using uncommon English words during the conversation with the participant to test whether or not the difficult word hindered their general comprehension of the speaker's argument. Throughout over a dozen research studies conducted, I was able to assess the reading comprehension skills of non-native speakers from different cultural backgrounds, primarily those of East Asian and South Asian heritage.
                 </p>
+                <iframe src="https://drive.google.com/file/d/1Xw6wZlTMTNNTZqzkDGXBlKsUB97uXZHb/preview" width="680" height="480"></iframe>
             </div>
         </div>
     </div>
