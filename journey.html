@@ -153,7 +153,78 @@
         position: relative;
     }
 
-    /* ----------- Bloomberg Page Design ----------- */
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 230px;
+        margin-right: 10px;
+        height: 490px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .parent-logo {
+        width: 260px;
+        margin-right: 10px;
+        height: 80px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .child {
+        width: 100%;
+        height: 100%;
+        background-color: #badce6; /*  fallback color */
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent:hover .child, .parent:focus .child {
+        -ms-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    .child::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child:before, .parent:focus .child:before {
+        display: block;
+    }
+
+    .imageWork {
+        /* padding-top: 40px; */
+        padding-left: 20px;
+        /* width: 90%; */
+        /* margin-right: auto; */
+        /* margin-left: auto;  */
+        text-align: center;
+        /* padding-bottom: 5%; */
+    }
+
+    .imageWork img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
+    /* ----------- Journey Page Design ----------- */
     .container {
         margin-left: 17%;
 	    margin-right: 5%;
@@ -237,6 +308,53 @@
         margin-top: 18px;
     }
 
+    .journey-app1 {
+        background-color: #badce6;
+        background-image: url("pictures/journey-app1.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey-app2 {
+        background-color: #badce6;
+        background-image: url("pictures/journey-app2.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey-app3 {
+        background-color: #badce6;
+        background-image: url("pictures/journey-app3.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey-shearman {
+        background-color: #badce6;
+        background-image: url("pictures/journey-shearman.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey-davis-polk {
+        background-color: #badce6;
+        background-image: url("pictures/journey-davis-polk.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .journey-sullivan-cromwell {
+        background-color: #badce6;
+        background-image: url("pictures/journey-sullivan-cromwell.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
 </style>
 
@@ -264,11 +382,37 @@
                     Journey Meditation is primarily a B2B company but has recently expanded into becoming an interactive smartphone app experience for everyday consumers to enjoy. In the early stages of development for the company, one of my main responsibilities was to help curate content and the design for the weekly newsletter, aimed at clients who attended community classes and who were employees of Journey's main clients.
                 </p>
                 <p>
-                    Journey Meditation primarily instigated the start of a transition from a purely B2B business model to a more general public consumer focus of this. Because of this, one of their main initiatives was to create design mockups and wireframes of the Journey Meditation app—now known as Journey Meditation LIVE on the app store.
-                </p>
+                    Journey Meditation primarily instigated the start of a transition from a purely B2B business model to a more general public consumer focus of this. Because of this, one of their main initiatives was to create design mockups and wireframes of the Journey Meditation app - now known as Journey Meditation LIVE on the app store.
+                </p><br>
+                <div class="imageWork">
+                    <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-app1"></div>
+                    </div>
+
+                    <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-app2"></div>
+                    </div>
+
+                    <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-app3"></div>
+                    </div>
+                </div><br><br>
                 <p>
                     The company primarily provides meditation teaching services to firms in industries that have been proven to have employees with generally higher stress levels. However, at the start of the internship, there were companies within an industry that had yet to be tapped—law firms. Due to the growing need to expand the portfolio of Journey's clients, I conducted a data-based exploratory analysis on the top U.S. law firms as well as the best points of contact within these firms and developed a portfolio for the company's CEO, guiding him on where to pursue relationships further. These signed contracts totaled to over $51k in sales for Journey Meditation.
-                </p>
+                </p><br>
+                <div class="imageWork">
+                    <div class="parent-logo" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-shearman"></div>
+                    </div>
+
+                    <div class="parent-logo" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-davis-polk"></div>
+                    </div>
+
+                    <div class="parent-logo" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child journey-sullivan-cromwell"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

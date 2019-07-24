@@ -153,7 +153,88 @@
         position: relative;
     }
 
-    /* ----------- Bloomberg Page Design ----------- */
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 338px;
+        margin-right: 10px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .parent-hydration {
+        width: 690px;
+        margin-right: 10px;
+        height: 430px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .parent-sketch {
+        width: 690px;
+        margin-right: 10px;
+        height: 515px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .child {
+        width: 100%;
+        height: 100%;
+        background-color: #badce6; /*  fallback color */
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent-hydration:hover .child, .parent-hydration:focus .child {
+        -ms-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    .child::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child:before, .parent:focus .child:before {
+        display: block;
+    }
+
+    .imageWork {
+        /* padding-top: 40px; */
+        padding-left: 20px;
+        /* width: 90%; */
+        /* margin-right: auto; */
+        /* margin-left: auto;  */
+        text-align: center;
+        /* padding-bottom: 5%; */
+    }
+
+    .imageWork img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
+    /* ----------- Canoe Page Design ----------- */
     .container {
         margin-left: 17%;
 	    margin-right: 5%;
@@ -236,6 +317,38 @@
         margin-top: 18px;
     }
 
+    .canoe-moment {
+        background-color: #badce6;
+        background-image: url("pictures/canoe-moment.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .canoe-stress {
+        background-color: #badce6;
+        background-image: url("pictures/canoe-stress.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .canoe-sketch {
+        background-color: #badce6;
+        background-image: url("pictures/canoe-sketch.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hydration {
+        background-color: #badce6;
+        background-image: url("pictures/hydration.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
 
 </style>
 
@@ -262,10 +375,27 @@
                 </p>
                 <p>
                     One of the key steps to making a proper concrete canoe is the hardening of the concrete once the concrete is placed onto the mold. As part of the Analysis subteam, one of my responsibilities has been to initialize and program an Arduino automated hydration system each year to maintain and maximize ideal humidity conditions. Optimizing this process from year to year has been crucial to the team’s success in providing the lightest, yet most durable, canoe.
-                </p>
+                </p><br>
+                <div class="imageWork">
+                    <div class="parent-hydration" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child hydration"></div>
+                    </div>
+                </div><br><br>
                 <p>
                     On top of this, in order to ensure that the maximum amount of people can row the canoe without the production of any cracks in the concrete, I utilized MATLAB to construct bending moment, shear force, stress envelope, and moment envelope diagrams that analyzed mix factors, such as tensile strength, safety, etc. Beyond the structural analysis of the canoe, I also conducted a three dimensional visual rendering of the canoe itself.
-                </p>
+                </p><br>
+                <div class="imageWork">
+                    <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child canoe-moment"></div>
+                    </div>
+                    <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child canoe-stress"></div>
+                    </div><br><br><br>
+                    <div class="parent-sketch" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                        <div class="child canoe-sketch"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
