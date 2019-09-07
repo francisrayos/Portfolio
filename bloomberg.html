@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Quicksand" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
-	<title>Rayos del Sol Design</title>
+	<title>Bloomberg | Francis Rayos del Sol Design</title>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/paper-full.js"></script>
@@ -164,6 +164,26 @@
         cursor: pointer;
     }
 
+    .parent-sc {
+        width: 400;
+        margin-right: 10px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .parent-crypto {
+        width: 470;
+        margin-right: 10px;
+        height: 209px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
     .child {
         width: 100%;
         height: 100%;
@@ -224,6 +244,7 @@
 
     .container a {
         text-decoration: none;
+        color: #385170;
     }
 
     .container a p {
@@ -272,7 +293,7 @@
     .postBody h2 {
         font-family: 'Quicksand';	
         font-size: 25px;
-        color: #B3EDF2;
+        color: #385170;
         padding-top: 20px;
         padding-bottom: 20px;
         letter-spacing: 1px;
@@ -325,9 +346,33 @@
         /* white-space: pre;  */
     }
 
+    .bloomberg-crypto {
+        background-color: #badce6;
+        background-image: url("pictures/bloomberg-crypto.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .supply-chain1 {
+        background-color: #badce6;
+        background-image: url("pictures/supply-chain1.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .supply-chain2 {
+        background-color: #badce6;
+        background-image: url("pictures/supply-chain2.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .bloomberg-fun {
         background-color: #badce6;
-        background-image: url("pictures/bloomberg-fun.jpg"); 
+        background-image: url("pictures/bloomberg-fun5.jpg"); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -335,7 +380,7 @@
 
     .bloomberg-fun2 {
         background-color: #badce6;
-        background-image: url("pictures/bloomberg-fun2.jpg"); 
+        background-image: url("pictures/bloomberg-fun.jpg"); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -343,7 +388,7 @@
 
     .bloomberg-fun3 {
         background-color: #badce6;
-        background-image: url("pictures/bloomberg-fun3.jpg"); 
+        background-image: url("pictures/bloomberg-fun7.jpg"); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -374,6 +419,11 @@
                     In the summer of 2019, I had the opportunity to work in Bloomberg's Global Data department as an intern on the Message Mining / Foreign Exchange teams. During my time as an intern, I optimized team workflows, provided data enhancement tools, and much more. Here's a collection of my projects during my three months at Bloomberg.
                 </p>
                 <h2>CRYPTOCURRENCY CHECK</h2>
+                <div class="imageWork">
+                    <div class="parent-crypto" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                        <div class="child bloomberg-crypto"></div>
+                    </div>
+                </div><br><br>
                 <p>
                     Bloomberg is a world leader in providing the most accurate, real time data to its clients and the rest of the financial market. Because of this, producing the highest quality data for the Terminal is expected. And as one of thousands of functionalities of the Bloomberg Terminal, the foreign exchange pricing that the company produces does not fall short of this expectation.
                 </p>
@@ -417,18 +467,41 @@
                 </code>
             </pre>
             <div class="postBody">
+                <h2>ADSK ANALYSIS</h2>
+                <p>
+                    One of the responsibilities of the Global Data department is to handle incoming client tickets, known as ADSKs. Due to the fact that the Message Mining team was one of the internal groups that received such tickets, at the end of the quarter it was protocol to deliver an update of the status and progress of how the team deals with these ADSKs. One of the projects I had during the summer was to conduct a data-driven visual analysis of the tickets received during Q2 2019. As I conducted this analysis, I created visual aids primarily using JavaScript and the d3.js library.
+                </p>
+                <p>
+                    Because the visual aids contained proprietary information specific to Bloomberg Data and its clients, I am not subject to share any of these visualizations currently. Please <a href="mailto:fmr32@cornell.edu">reach out to me</a> if you'd like to learn more!
+                </p>
+            </div>
+            <div class="postBody">
+                <h2>SUPPLY CHAIN INVENTORY TRACKING</h2>
+                <div class="imageWork">
+                    <div class="parent-sc" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                        <div class="child supply-chain1"></div>
+                    </div>
+                    <div class="parent-sc" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                        <div class="child supply-chain2"></div>
+                    </div>
+                </div><br><br>
+                <p>
+                    At the end of the summer, the other interns under the Diversified Data department and I collaborated to produce a final project enhancing the efforts of Bloomberg's Supply Chain department. The purpose of this project was to extract data from current Bills of Lading data featured on the Bloomberg Terminal and create an inventory tracking system, similar to that of competitors like Panjiva and Import Genius. My responsibilities on the team involved taking the idea from conception to production, focusing on the user-facing product for Bloomberg's clients. Using d3.js and the extracted data, I implemented a visual application for partnered clients to select and analyze United States imports for various industries. Our team ultimately ended up placing as the runner-up for the best summer intern project, and our project is currently in production amongst current employees to push as a full feature on the Bloomberg Terminal!
+                </p>
+            </div>
+            <div class="postBody">
                 <h2>THANK YOU, BLOOMBERG!</h2>
             </div>
             <div class="imageWork">
-                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
                     <div class="child bloomberg-fun"></div>
                 </div>
 
-                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
                     <div class="child bloomberg-fun2"></div>
                 </div>
 
-                <div class="parent" onclick="" style="box-shadow: 2px 2px 10px #ededed;">
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
                     <div class="child bloomberg-fun3"></div>
                 </div>
             </div>

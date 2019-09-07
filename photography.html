@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Quicksand" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
-	<title>Rayos del Sol Design</title>
+	<title>Photography | Francis Rayos del Sol Design</title>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/paper-full.js"></script>
@@ -153,6 +153,77 @@
         position: relative;
     }
 
+    /* ----------- Hover Effect Design ----------- */
+    .parent {
+        width: 225;
+        margin-right: 20px;
+        height: 335px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .parent-travel {
+        width: 240;
+        margin-right: 20px;
+        height: 175px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .child {
+        width: 100%;
+        height: 100%;
+        background-color: #badce6; /*  fallback color */
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        display: block;	
+        
+    }
+
+    .parent:hover .child, .parent:focus .child, .parent-travel:hover .child, .parent-travel:focus .child {
+        -ms-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    .child::before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .parent:hover .child:before, .parent:focus .child:before, .parent-travel:hover .child:before, .parent-travel:focus .child:before {
+        display: block;
+    }
+
+    .imageWork {
+        /* padding-top: 40px; */
+        padding-left: 20px;
+        /* width: 90%; */
+        /* margin-right: auto; */
+        /* margin-left: auto;  */
+        text-align: center;
+        /* padding-bottom: 5%; */
+    }
+
+    .imageWork img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
     /* ----------- Photography Page Design ----------- */
     .container {
         margin-left: 17%;
@@ -211,9 +282,8 @@
     .postBody h2 {
         font-family: 'Quicksand';	
         font-size: 25px;
-        color: #B3EDF2;
+        color: #385170;
         padding-top: 20px;
-        padding-bottom: 20px;
         letter-spacing: 1px;
     }
 
@@ -236,6 +306,125 @@
         margin-top: 18px;
     }
 
+    .minimalism1 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism1.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .minimalism2 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism2.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .minimalism3 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism3.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .minimalism4 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism4.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .minimalism5 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism5.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .minimalism6 {
+        background-color: #badce6;
+        background-image: url("pictures/minimalism6.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel1 {
+        background-color: #badce6;
+        background-image: url("pictures/travel1.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel2 {
+        background-color: #badce6;
+        background-image: url("pictures/travel2.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel3 {
+        background-color: #badce6;
+        background-image: url("pictures/travel3.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel4 {
+        background-color: #badce6;
+        background-image: url("pictures/travel4.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel5 {
+        background-color: #badce6;
+        background-image: url("pictures/travel5.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel6 {
+        background-color: #badce6;
+        background-image: url("pictures/travel6.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel7 {
+        background-color: #badce6;
+        background-image: url("pictures/travel7.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel8 {
+        background-color: #badce6;
+        background-image: url("pictures/travel8.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .travel9 {
+        background-color: #badce6;
+        background-image: url("pictures/travel9.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
 </style>
 
@@ -256,7 +445,59 @@
 
             <div class="postBody">
                 <h1>PHOTOGRAPHY</h1>
-                <p>Stay Tuned for Updates!</p>
+                <h2>minimalism</h2>
+            </div>
+            <div class="imageWork">
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism1"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism2"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism3"></div>
+                </div><br><br><br>
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism4"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism5"></div>
+                </div>
+                <div class="parent" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child minimalism6"></div>
+                </div>
+            </div>
+            <div class="postBody">
+                <h2>travel</h2>
+            </div>
+            <div class="imageWork">
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel1"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel2"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel3"></div>
+                </div><br><br><br>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel4"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel5"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel6"></div>
+                </div><br><br><br>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel7"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel8"></div>
+                </div>
+                <div class="parent-travel" onclick="" style="box-shadow: 5px 5px 15px #ededed;">
+                    <div class="child travel9"></div>
+                </div>
             </div>
         </div>
     </div>
